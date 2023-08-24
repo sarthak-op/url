@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shortened URL</title>
+  </head>
+  <body style="text-align: center">
+    <h1>Shortened URL</h1>
+    <p>Original URL: <a href="<%= originalUrl %>"><%= originalUrl %></a></p>
+    <p>Shortened URL: <a href="<%= shortUrl %>"><%= shortUrl %></a></p>
+    <p>
+      You can check short url by going-
+      <b><span id="domain"></span>/<%= shortUrl%></b>
+    </p>
+
+    <p id="domain-info"><span id="domain"></span></p>
+
+    <script>
+      var domainElement = document.getElementById("domain");
+      domainElement.textContent = window.location.origin;
+    </script>
+  </body>
+</html>
